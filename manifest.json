@@ -1,0 +1,25 @@
+{
+  "name": "FB unseen",
+  "version": "0.0.3",
+  "manifest_version": 2,
+  "description": "Blocks the \"seen\" feature of the facebook messenger.",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["jquery.js", "read_button.js"]
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.facebook.com/*"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
