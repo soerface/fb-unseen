@@ -1,0 +1,14 @@
+.mark_as_read {
+  margin: 2px;
+  cursor: pointer;
+}
+
+.mark_as_read:hover {
+  text-decoration: underline;
+}
+
+.mark_as_read.inactive {
+  background-color: #989898;
+  cursor: default;
+  text-decoration: none;
+}

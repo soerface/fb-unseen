@@ -7,6 +7,7 @@ Blocks the "seen" feature of the facebook messenger.
 Sick of the new "seen" feature of facebook? Block the read receipts with this
 extensions and your friends will no longer be able to see if you read their
 messages. You will still be able to see if they read your messages.
+Additionally you get a button to mark messages explicit as read.
 
 Attention: If you are loading the "full conversation" page (Messages » Name of
 your friend), it will get marked as "read" and your friend will see it!
