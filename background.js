@@ -1,3 +1,7 @@
+var settings = new Store("settings", {
+    "show_mark_as_read": true
+});
+
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {
     cancel: true
