@@ -18,8 +18,12 @@ function add_read_buttons() {
 }
 
 $(document).ready(function() {
-  $('#fbDockChatTabs').bind('DOMNodeInserted', function() {
-    add_read_buttons()
+  chrome.extension.sendRequest({action: 'getSettings'}, function(settings) {
+    if (settings.show_mark_as_read) {
+      $('#fbDockChatTabs').bind('DOMNodeInserted', function() {
+        add_read_buttons()
+      })
+      add_read_buttons()
+    }
   })
-  add_read_buttons()
 })
