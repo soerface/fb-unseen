@@ -1,10 +1,11 @@
 {
   "name": "FB unseen",
+  "icon": "icon48.png",
   "version": "0.1.0",
   "manifest_version": 2,
-  "description": "Blocks the \"seen\" feature of the facebook messenger.",
+  "description": "Blocks the ”seen” feature of the facebook messenger.",
   "background": {
-    "page": "background.html"
+    "scripts": ["background.js", "fancy-settings/source/lib/store.js"]
   },
   "content_scripts": [
     {
