@@ -7,10 +7,12 @@ var settings = new Store('settings', {
 });
 
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
+  // TODO: Chrome bug? There is no `ids[msg`, but `ids[msg.somehexnumbers]`
+  alert(details['requestBody']['formData']['ids[msg'])
   return {
     cancel: settings.get('block_chat_seen')
   }
-}, { urls: ['*://*.facebook.com/*change_read_status*'] }, ['blocking'])
+}, { urls: ['*://*.facebook.com/*change_read_status*'] }, ['blocking', 'requestBody'])
 
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {
