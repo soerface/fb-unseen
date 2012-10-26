@@ -32,8 +32,8 @@ this.i18n = {
     'de': 'Suche'
   },
   'show_mark_as_read': {
-    'en': 'Show the ”Mark as read” Button (reload of facebook page required)',
-    'de': '„Als gelesen markieren“ Knopf anzeigen (Neuladen der Facebook Seite erforderlich)'
+    'en': 'Show the ”Mark as read” Button (reload of facebook page required) - This feature is currently broken, for more details, visit <a href="http://swege.github.com/fb-unseen/">http://swege.github.com/fb-unseen/</a>',
+    'de': '„Als gelesen markieren“ Knopf anzeigen (Neuladen der Facebook Seite erforderlich) - Diese Funktion ist aktuell defekt, weitere Informationen unter <a href="http://swege.github.com/fb-unseen/">http://swege.github.com/fb-unseen/</a>'
   },
   'settings': {
     'en': 'Settings',

@@ -22,4 +22,7 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
   if (request.action == 'getSettings') {
     sendResponse(settings.toObject())
   }
+  else if (request.action == 'open_github') {
+    chrome.tabs.create({url: 'http://swege.github.com/fb-unseen/', active: false})
+  }
 })
