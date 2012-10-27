@@ -15,7 +15,7 @@ window.addEvent("domready", function () {
       var elements = ['show_mark_as_read', 'block_chat_seen', 'block_typing_indicator']
       elements.forEach(function(element) {
         settings.manifest[element].addEvent("action", function (state) {
-           _gaq.push(['_trackEvent', 'Settings', element, state])
+           _gaq.push(['_trackEvent', 'Settings', element, state.toString()])
         })
       })
     })
