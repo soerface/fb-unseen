@@ -33,7 +33,11 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
   if (request.action == 'getSettings') {
     sendResponse(settings.toObject())
   }
-  else if (request.action == 'open_github') {
+  else if (request.action == 'getDisableButton') {
+    sendResponse(localStorage['force_disable_button'])
+  }
+  else if (request.action == 'setDisableButton') {
+    localStorage['force_disable_button'] = 'true'
     chrome.tabs.create({url: 'http://swege.github.com/fb-unseen/', active: false})
   }
 })
