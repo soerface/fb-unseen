@@ -7,7 +7,7 @@ _gaq.push(['_trackPageview']);
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
   ga.src = 'https://ssl.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+})()
 
 var settings = new Store('settings', {
     'show_mark_as_read': true,
@@ -15,7 +15,11 @@ var settings = new Store('settings', {
     'block_typing_indicator': false
     // TODO
     // 'block_group_seen': false
-});
+})
+
+if (!settings.get('block_chat_seen')) {
+  chrome.browserAction.setIcon({path: 'icon48.disabled.png'})
+}
 
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {
@@ -40,5 +44,11 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
     localStorage['force_disable_button'] = 'true'
     chrome.tabs.create({url: 'http://swege.github.com/fb-unseen/', active: false})
     _gaq.push(['_trackEvent', 'Mark as read', 'forceDisable'])
+  }
+  else if (request.action == 'quickDisable') {
+    chrome.browserAction.setIcon({path: 'icon48.disabled.png'})
+  }
+  else if (request.action == 'quickEnable') {
+    chrome.browserAction.setIcon({path: 'icon48.png'})
   }
 })

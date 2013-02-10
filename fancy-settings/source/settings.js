@@ -9,16 +9,27 @@ _gaq.push(['_trackPageview']);
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
+function set_icon(state) {
+  if (state) {
+    chrome.extension.sendRequest({action: 'quickEnable'})
+  } else {
+    chrome.extension.sendRequest({action: 'quickDisable'})
+  }
+}
+
 window.addEvent("domready", function () {
     // Option 1: Use the manifest:
     new FancySettings.initWithManifest(function (settings) {
       var elements = ['show_mark_as_read', 'block_chat_seen', 'block_typing_indicator']
       elements.forEach(function(element) {
         settings.manifest[element].addEvent("action", function (state) {
-           _gaq.push(['_trackEvent', 'Settings', element, state.toString()])
+          _gaq.push(['_trackEvent', 'Settings', element, state.toString()])
+          if (element == 'block_chat_seen') {
+          set_icon(state)
+          }
+          })
         })
       })
-    })
 
     // Option 2: Do everything manually:
     /*

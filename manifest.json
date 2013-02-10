@@ -1,6 +1,5 @@
 {
   "name": "FB unseen",
-  "icon": "icon48.png",
   "version": "0.1.3",
   "manifest_version": 2,
   "description": "Blocks the ”seen” feature of the facebook messenger.",
@@ -19,6 +18,10 @@
     "webRequestBlocking",
     "*://*.facebook.com/*"
   ],
+  "browser_action": {
+    "default_icon": "icon48.png",
+    "default_popup": "popup.html"
+  },
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

@@ -23,7 +23,7 @@ function add_read_buttons() {
 $(document).ready(function() {
   chrome.extension.sendRequest({action: 'getSettings'}, function(settings) {
     chrome.extension.sendRequest({action: 'getDisableButton'}, function(forceDisableButton) {
-      if (settings.show_mark_as_read && localStorage['force_disable_button'] != 'true' && forceDisableButton != 'true') {
+      if (false && settings.show_mark_as_read && localStorage['force_disable_button'] != 'true' && forceDisableButton != 'true') {
         $('#fbDockChatTabs').bind('DOMNodeInserted', function() {
           add_read_buttons()
         })
