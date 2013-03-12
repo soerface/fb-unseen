@@ -12,7 +12,8 @@ _gaq.push(['_trackPageview']);
 var settings = new Store('settings', {
     'show_mark_as_read': true,
     'block_chat_seen': true,
-    'block_typing_indicator': false
+    'block_typing_indicator': false,
+    'hide_chat_seen': false
     // TODO
     // 'block_group_seen': false
 })

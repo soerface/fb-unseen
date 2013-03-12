@@ -11,6 +11,13 @@ this.manifest = {
     },
     {
       'tab': i18n.get('general'),
+      'group': i18n.get('interface'),
+      'name': 'hide_chat_seen',
+      'type': 'checkbox',
+      'label': i18n.get('hide_chat_seen')
+    },
+    {
+      'tab': i18n.get('general'),
       'group': i18n.get('blocks'),
       'name': 'block_chat_seen',
       'type': 'checkbox',

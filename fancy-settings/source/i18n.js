@@ -19,6 +19,10 @@ this.i18n = {
     'en': 'General',
     'de': 'Allgemein'
   },
+  'hide_chat_seen': {
+    'en': 'Do not show me if others read my messages. Reload of facebook page required.',
+    'de': 'Zeige mir nicht an, dass andere meine Nachrichten gelesen haben. Neuladen der Facebook Seite erforderlich.'
+  },
   'interface': {
     'en': 'Interface',
     'de': 'Oberfläche'

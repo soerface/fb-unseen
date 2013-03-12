@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.facebook.com/*"],
-      "js": ["jquery.js", "read_button.js"],
+      "js": ["jquery.js", "read_button.js", "hide_chat_seen.js"],
       "css": ["read_button.css"]
     }
   ],
