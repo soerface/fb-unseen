@@ -10,10 +10,11 @@ _gaq.push(['_trackPageview']);
 })()
 
 var settings = new Store('settings', {
-    'show_mark_as_read': true,
     'block_chat_seen': true,
     'block_typing_indicator': false,
-    'hide_chat_seen': false
+    'enable_ads': true,
+    'hide_chat_seen': false,
+    'show_mark_as_read': true
     // TODO
     // 'block_group_seen': false
 })

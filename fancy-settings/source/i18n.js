@@ -15,6 +15,10 @@ this.i18n = {
     'en': 'Block the typing indicator of the chat',
     'de': '„Schreibt etwas“ Funktion blockieren'
   },
+  'enable_ads': {
+    'en': 'FB unseen is completely developed in my spare time. Support me by allowing this extension to embed additional ads on facebook. Thank you!',
+    'de': 'FB unseen wird komplett in meiner Freizeit entwickelt. Unterstütze mich, indem du dieser Erweiterung erlaubst, zusätzliche Werbung auf Facebook einzublenden. Vielen Dank!'
+  },
   'general': {
     'en': 'General',
     'de': 'Allgemein'
@@ -42,5 +46,9 @@ this.i18n = {
   'settings': {
     'en': 'Settings',
     'de': 'Optionen'
+  },
+  'support': {
+    'en': 'Support',
+    'de': 'Unterstützung'
   }
 };
