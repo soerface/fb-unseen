@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var a = document.createElement('a');
     var text = document.createTextNode('Support me?')
     a.appendChild(text);
-    a.href = 'http://swege.github.com/fb-unseen/support.html'
+    a.href = 'http://swege.github.io/fb-unseen/support.html'
     a.target = '_blank'
     small.appendChild(a);
     document.body.appendChild(small);
