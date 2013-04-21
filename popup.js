@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // TODO
       // 'block_group_seen': false
     })
-    var p = document.createElement('p')
+    var p = document.createElement('p');
     if (settings.get('block_chat_seen')) {
       chrome.browserAction.setIcon({path: 'icon48.disabled.png'})
       settings.set('block_chat_seen', false)
@@ -31,4 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     p.appendChild(text);
     document.body.appendChild(p);
+
+    var small = document.createElement('small');
+    var a = document.createElement('a');
+    var text = document.createTextNode('Support me?')
+    a.appendChild(text);
+    a.href = 'http://swege.github.com/fb-unseen/support.html'
+    a.target = '_blank'
+    small.appendChild(a);
+    document.body.appendChild(small);
 })
