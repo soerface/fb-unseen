@@ -44,7 +44,7 @@ chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
   }
   else if (request.action == 'setDisableButton') {
     localStorage['force_disable_button'] = 'true'
-    chrome.tabs.create({url: 'http://swege.github.com/fb-unseen/', active: false})
+    chrome.tabs.create({url: 'http://swege.github.io/fb-unseen/', active: false})
     _gaq.push(['_trackEvent', 'Mark as read', 'forceDisable'])
   }
   else if (request.action == 'quickDisable') {
