@@ -20,7 +20,7 @@ function set_icon(state) {
 window.addEvent("domready", function () {
     // Option 1: Use the manifest:
     new FancySettings.initWithManifest(function (settings) {
-      var elements = ['show_mark_as_read', 'block_chat_seen', 'block_typing_indicator', 'hide_chat_seen']
+      var elements = ['show_mark_as_read', 'block_chat_seen', 'block_typing_indicator', 'hide_chat_seen', 'enable_ads']
       elements.forEach(function(element) {
         settings.manifest[element].addEvent("action", function (state) {
           _gaq.push(['_trackEvent', 'Settings', element, state.toString()])

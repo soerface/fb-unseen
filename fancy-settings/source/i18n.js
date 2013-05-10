@@ -46,5 +46,9 @@ this.i18n = {
   'show_mark_as_read': {
     'en': 'Show the ”Mark as read” Button (reload of facebook page required) - This feature is currently broken, for more details, visit <a href="http://swege.github.io/fb-unseen/">http://swege.github.io/fb-unseen/</a>',
     'de': '„Als gelesen markieren“ Knopf anzeigen (Neuladen der Facebook Seite erforderlich) - Diese Funktion ist aktuell defekt, weitere Informationen unter <a href="http://swege.github.io/fb-unseen/">http://swege.github.io/fb-unseen/</a>'
+  },
+  'support': {
+    'en': 'Support',
+    'de': 'Unterstützung'
   }
 };

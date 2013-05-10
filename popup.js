@@ -31,13 +31,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     p.appendChild(text);
     document.body.appendChild(p);
-
-    var small = document.createElement('small');
-    var a = document.createElement('a');
-    var text = document.createTextNode('Support me?')
-    a.appendChild(text);
-    a.href = 'http://swege.github.io/fb-unseen/support.html'
-    a.target = '_blank'
-    small.appendChild(a);
-    document.body.appendChild(small);
 })
