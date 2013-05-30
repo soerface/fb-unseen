@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
       var text = document.createTextNode('FB unseen enabled. Your friends will not be notified when you read their messages.')
     }
     p.appendChild(text);
+    p.appendChild(document.createElement('hr'))
+    div = document.createElement('div');
+    var external_html = external_html || ''
+    div.innerHTML = external_html;
+    p.appendChild(div);
     document.body.appendChild(p);
 
     var small = document.createElement('small');
