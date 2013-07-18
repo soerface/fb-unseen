@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
       // TODO
       // 'block_group_seen': false
     })
-    var p = document.createElement('p');
     if (settings.get('block_chat_seen')) {
       chrome.browserAction.setIcon({path: 'icon48.disabled.png'})
       settings.set('block_chat_seen', false)
@@ -29,20 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
       _gaq.push(['_trackEvent', 'Popup', 'quickToggle', 'enabled'])
       var text = document.createTextNode('FB unseen enabled. Your friends will not be notified when you read their messages.')
     }
-    p.appendChild(text);
-    p.appendChild(document.createElement('hr'))
-    div = document.createElement('div');
-    var external_html = external_html || ''
-    div.innerHTML = external_html;
-    p.appendChild(div);
-    document.body.appendChild(p);
+    $('#message').html(text);
 
-    var small = document.createElement('small');
-    var a = document.createElement('a');
-    var text = document.createTextNode('Support me?')
-    a.appendChild(text);
-    a.href = 'http://swege.github.io/fb-unseen/support.html'
-    a.target = '_blank'
-    small.appendChild(a);
-    document.body.appendChild(small);
+    $.get('http://swege.github.io/fb-unseen/popup_news.html', function(data) {
+      $('#news').html(data);
+      $('#news a').click(function() {
+        _gaq.push(['_trackEvent', 'Popup', 'newsLinkClicked', $(this).text() + ' - ' + $(this).attr('href')]);
+      });
+    });
 })
