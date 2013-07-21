@@ -32,6 +32,7 @@ function add_read_buttons() {
       var partner_id = 'fbid:' + RegExp.$1;
       var read_url = 'https://m.facebook.com/messages/read/?tid=';
       $(this).find('.mark_as_read').click(function() {
+        chrome.extension.sendRequest({action: 'trackMarkAsRead'})
         var button = $(this)
         button.addClass('inactive');
         setTimeout(function() {
@@ -44,7 +45,7 @@ function add_read_buttons() {
           }
           $.ajax({
             type: 'GET',
-            url: read_url// + conversation_id
+            url: read_url + conversation_id
           });
           button.removeClass('inactive');
         }, 2000);
